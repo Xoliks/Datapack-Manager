@@ -1,1 +1,1 @@
-$datapack enable "$(file)"
+$datapack enable '$(filepath)'

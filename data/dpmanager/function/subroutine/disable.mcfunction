@@ -1,1 +1,1 @@
-$datapack disable "$(file)"
+$datapack disable '$(filepath)'
