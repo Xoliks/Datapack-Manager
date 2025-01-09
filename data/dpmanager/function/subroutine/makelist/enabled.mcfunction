@@ -2,7 +2,7 @@ data modify storage dpmanager:datapacks list append value {new:true,enabled:true
 
 execute store result storage dpmanager:datapacks list[{new:true}].load_order int 1 if data storage dpmanager:datapacks list[{enabled:true}]
 data modify storage dpmanager:datapacks temp.data.description set from storage dpmanager:lastoutput enabled[0].hover_event.text.extra[2]
-execute store result storage dpmanager:datapacks list[{new:true}].description_frequency int 1 run function dpmanager:subroutine/makelist/determine_description_frequency with storage dpmanager:datapacks temp
+execute store result storage dpmanager:datapacks list[{new:true}].description_duplicate_count int 1 run function dpmanager:subroutine/makelist/determine_description_duplicate_count with storage dpmanager:datapacks temp
 data modify storage dpmanager:datapacks list[{new:true}].description set from storage dpmanager:lastoutput enabled[0].hover_event.text.extra[2]
 data modify storage dpmanager:datapacks list[{new:true}].filename set from storage dpmanager:lastoutput enabled[0].hover_event.text.extra[0]
 data modify storage dpmanager:datapacks list[{new:true}].filename set from storage dpmanager:lastoutput enabled[0].hover_event.text.extra[0].""
