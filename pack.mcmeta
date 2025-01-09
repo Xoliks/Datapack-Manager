@@ -1,0 +1,6 @@
+{
+	"pack": {
+		"pack_format": 62,
+		"description": "A lightweight library pack for managing installed datapacks based on their pack descriptions"
+	}
+}

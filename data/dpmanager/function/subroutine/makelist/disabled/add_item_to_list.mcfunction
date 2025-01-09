@@ -1,0 +1,2 @@
+$data modify storage dpmanager:datapacks disabled.'$(description)'.file set from storage dpmanager:lastoutput disabled[0].with[0].with[0].""
+$data modify storage dpmanager:datapacks all.'$(description)'.file set from storage dpmanager:lastoutput disabled[0].with[0].with[0].""

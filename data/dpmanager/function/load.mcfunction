@@ -1,0 +1,1 @@
+function dpmanager:api/makelist
