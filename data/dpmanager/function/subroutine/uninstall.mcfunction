@@ -1,6 +1,9 @@
-data remove storage dpmanager:datapacks list
-data remove storage dpmanager:datapacks out
-data remove storage dpmanager:datapacks temp
+data remove storage dpmanager:data packinfo
+data remove storage dpmanager:data out
+data remove storage dpmanager:data temp
+data remove storage dpmanager:data queue
+
+scoreboard objectives remove dpmanager.numbers
 
 setblock 29999997 300 -9936745 air
 setblock 29999997 301 -9936745 air

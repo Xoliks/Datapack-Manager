@@ -1,0 +1,1 @@
+$datapack enable '$(filepath)' first
