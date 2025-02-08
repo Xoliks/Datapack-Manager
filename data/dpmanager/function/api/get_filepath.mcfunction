@@ -1,4 +1,4 @@
-# gets the filepath of the datapack specified by it's pack info
+# gets the filepath of the datapack specified by its packinfo
 # the filepath goes to data storage at dpmanager:data out
 #> /function dpmanager:api/get_filepath {packinfo:{<info>}}
 

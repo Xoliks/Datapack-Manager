@@ -1,5 +1,6 @@
-# gets the enabled of the datapack specified by it's pack info
-# the enabled is returned as the result of this function
-#> /function dpmanager:api/return_load_order {packinfo:{<info>}}
+# returns 1 if the pack is enabled, returns fail otherwise
+#> /function dpmanager:api/return_enabled {packinfo:{<info>}}
 
-$return run data get storage dpmanager:data packinfo[$(packinfo)].enabled
+$execute store result score is_enabled dpmanager.numbers run data get storage dpmanager:data packinfo[$(packinfo)].enabled
+execute if score is_enabled dpmanager.numbers matches 1 run return 1
+return fail

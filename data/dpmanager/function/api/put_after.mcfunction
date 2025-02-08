@@ -1,7 +1,7 @@
 # this function is designed to be called in the load function of a pack with a dependancy, to force this pack to load after the pack it's dependant on
 # forces pack1 to be loaded after pack2 like:
 #> /datapack enable <pack1> after <pack2>
-# it does not matter if pack1 or pack2 are enabled or disabled, this pack will enable them both in the correct order
+# it does not matter if pack1 or pack2 are enabled or disabled, this function will enable them both in the correct order
 # if pack1 is already loaded direcly after pack2, then this function will do nothing. this is to prevent reload loops when this function is in a pack's load function
 #> function dpmanager:api/enable_after {packinfo_1:{<info>},packinfo_2:{<info>}}
 
@@ -27,7 +27,7 @@ $execute if score enabled1 dpmanager.numbers matches 1 if score enabled2 dpmanag
 execute if score enabled1 dpmanager.numbers matches 1 if score enabled2 dpmanager.numbers matches 1 run \
   scoreboard players operation load_order1 dpmanager.numbers -= load_order2 dpmanager.numbers
 execute if score enabled1 dpmanager.numbers matches 1 if score enabled2 dpmanager.numbers matches 1 \
-  if score load_order1 dpmanager.numbers matches 0..1 run return 0
+  if score load_order1 dpmanager.numbers matches 0.. run return 0
 
 # if pack2 is disabled
 $execute unless score enabled1 dpmanager.numbers matches 1 run data modify storage dpmanager:data queue.immediate append value \

@@ -1,4 +1,4 @@
-# gets the filename of the datapack specified by it's pack info
+# gets the filename of the datapack specified by its packinfo
 # the filename goes to data storage at dpmanager:data out
 #> /function dpmanager:api/get_filename {packinfo:{<info>}}
 
